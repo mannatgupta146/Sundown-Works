@@ -16,3 +16,24 @@ html, body {
     background-color: #efeae3;
     position: relative;
 }
+
+nav{
+    padding: 2vw 2vw;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-elem{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#nav-elem h4{
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
