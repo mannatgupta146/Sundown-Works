@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Inter', sans-serif;
+
 }
 
 html, body {
@@ -36,4 +37,51 @@ nav{
     padding: 10px 20px;
     border: 1px solid #8a8a8a8a;
     border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+#nav-elem h4 a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-elem h4:hover a{
+    color: #fff;
+}
+
+#nav-elem h4::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-elem h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    background-color: chocolate;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#left h3{
+    width: 30vw;
+    font-size: 2vw;
 }
