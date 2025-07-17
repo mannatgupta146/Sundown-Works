@@ -13,6 +13,7 @@ html, body {
 #main {
     position: relative;
     z-index: 10;
+    overflow: hidden;
 }
 
 #page1 {
@@ -180,3 +181,10 @@ nav{
     }
 }
 
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+    padding: 0 2vw;
+}
