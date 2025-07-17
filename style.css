@@ -106,7 +106,7 @@ nav{
     margin-top: 4vw;
     border-radius: 20px;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 #hero{
@@ -115,7 +115,7 @@ nav{
     height: 36vw;
     right: 0;
     top: 65vh;
-    z-index: 10;
+    z-index: 1;
 }
 
 #hero1 {
@@ -142,7 +142,7 @@ nav{
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    animation-duration: 5s;
+    animation-duration: 3s;
     z-index: 2;
 }
 
@@ -157,7 +157,7 @@ nav{
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     z-index: 3;
 }
 
