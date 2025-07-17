@@ -90,7 +90,7 @@ nav{
 
 #right h1{
     font-size: 8vw;
-    line-height: 6vw;
+    line-height: 6.5vw;
     text-align: right;
 }
 
@@ -99,3 +99,74 @@ nav{
     margin-top: 4vw;
     border-radius: 20px;
 }
+
+#hero{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 65vh;
+}
+
+#hero1 {
+    height: 100%;
+    width: 100%;
+    background-color: #fe320a;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#hero2 {
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#fe320a,#e93e1c);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime2;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    z-index: 2;
+}
+
+#hero3 {
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#fe320a,#e93e1c);
+    border-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+    animation-name: anime1;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    z-index: 3;
+}
+
+
+@keyframes anime1{
+    from{
+        transform: translate(55%, -3%);
+    }
+    to{
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2{
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-20%, 25%);
+    }
+}
+
