@@ -13,7 +13,6 @@ html, body {
 #main {
     position: relative;
     z-index: 10;
-    overflow: hidden;
 }
 
 #page1 {
@@ -182,9 +181,26 @@ nav{
 }
 
 #page2 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #efeae3;
     position: relative;
-    padding: 0 2vw;
+    padding: 8vw 0;
+}
+
+#moving-text h1{
+    font-size: 5vw;
+    display: inline-block;
+}
+
+.con{
+    white-space: nowrap;
+}
+
+#gola{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fe320a;
 }
