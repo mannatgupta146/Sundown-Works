@@ -206,7 +206,7 @@ nav{
 .con{
     white-space: nowrap;
     display: inline-block;
-    animation: move 10s linear 0s infinite normal forwards;
+    animation: move 20s linear 0s infinite normal forwards;
 }
 
 #gola{
