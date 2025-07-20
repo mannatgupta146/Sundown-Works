@@ -269,24 +269,24 @@ nav{
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(to top right, #ff2d03, #ff850b);
-    top: 45%;
-    left: 15%;
+    top: 40%;
+    left: 20%;
     filter: blur(20px);
     z-index: 1;
     animation-name: gooey;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes gooey {
     from{
-        transform: translate(10%, -10%);
+        transform: translate(10%, -10%) skew(0);
     }
 
     to{
-        transform: translate(-10%, 10%);
+        transform: translate(-10%, 10%) skew(-10deg);
     }
 }
 
