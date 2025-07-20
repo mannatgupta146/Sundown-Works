@@ -282,10 +282,12 @@ nav{
 
 @keyframes gooey {
     from{
+        filter: blur(20px);
         transform: translate(10%, -10%) skew(0);
     }
 
     to{
+        filter: blur(30px);
         transform: translate(-10%, 10%) skew(-10deg);
     }
 }
