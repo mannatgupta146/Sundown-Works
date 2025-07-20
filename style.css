@@ -227,3 +227,8 @@ nav{
         transform: translateX(-100%);
     }
 }
+
+#page2-bottom{
+    width: 100%;
+    background-color: #efeae3;
+}
