@@ -296,7 +296,7 @@ nav{
     min-height: 100vh;
     width: 100%;
     background-color: #efeae3;
-    padding: 3vw 0;
+    padding: 1vw 0;
 }
 
 .elem{
@@ -329,4 +329,18 @@ nav{
 .elem:hover .overlay{
     top: 0;
     transition: all ease 0.5s;
+}
+
+#fixed-image{
+    height: 28vw;
+    width: 22vw;
+    position: fixed;
+    border-radius: 10px;
+    background-color: blue;
+    z-index: 99;
+    left: 50%;
+    top: 27%;
+    display: none;
+    background-size: cover;
+    background-position: center;
 }
