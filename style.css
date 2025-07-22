@@ -328,5 +328,5 @@ nav{
 
 .elem:hover .overlay{
     top: 0;
-    transition: all ease 0.4s;
+    transition: all ease 0.5s;
 }
