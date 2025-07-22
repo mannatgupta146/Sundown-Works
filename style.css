@@ -293,22 +293,40 @@ nav{
 }
 
 #page3{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #efeae3;
+    padding: 3vw 0;
 }
 
 .elem{
     width: 100%;
-    height: 150px;
+    height: 120px;
     position: relative;
-    background-color: red;
     display: flex;
     align-items: center;
-    padding: 0 2vw; 
-    border-top: 1px solid #000;
+    padding: 0 4vw; 
+    border-bottom: 1px solid #38383864;
+    border-top: 1px solid #38383864;
+    overflow: hidden;
 }
 
 .elem h2{
-    font-size: 2vw;
+    font-size: 2.5vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+}
+
+.elem:hover .overlay{
+    top: 0;
+    transition: all ease 0.4s;
 }
