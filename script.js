@@ -9,7 +9,7 @@ function page3Animation() {
     var elemC = document.querySelector('#elem-container');
     var fixed = document.querySelector("#fixed-image");
 
-    if (!elemC || !fixed) return; // Safety check if elements don't exist
+    if (!elemC || !fixed) return; 
 
     elemC.addEventListener('mouseenter', function () {
         fixed.style.display = 'block';
