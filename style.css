@@ -33,6 +33,10 @@ nav{
     justify-content: space-between;
 }
 
+nav img{
+    height: 9vh;
+}
+
 #nav-elem{
     display: flex;
     align-items: center;
@@ -396,4 +400,8 @@ nav{
     border-top: 1px solid #dadada;
     height: 10vh;
     width: 100%;
+}
+
+@media (max-width: 600px) {
+    
 }
