@@ -33,6 +33,10 @@ nav{
     justify-content: space-between;
 }
 
+nav h3{
+    display: none;
+}
+
 nav img{
     height: 9vh;
 }
