@@ -31,6 +31,7 @@ nav{
     position: relative;
     align-items: center;
     justify-content: space-between;
+    z-index: 100;
 }
 
 nav h3{
@@ -416,8 +417,7 @@ nav img{
 
     nav{
         padding: 8vw 0vw;
-        position: relative;
-        z-index: 100;
+
     }
 
     nav img{
