@@ -416,6 +416,8 @@ nav img{
 
     nav{
         padding: 8vw 0vw;
+        position: relative;
+        z-index: 100;
     }
 
     nav img{
@@ -424,5 +426,15 @@ nav img{
 
     #nav-elem{
         display: none;
+    }
+
+    nav h3{
+        display: block;
+        padding: 3vw 5vw;
+        border: 1px solid #ababab;
+        border-radius: 50px;
+        font-size: 3vw;
+        font-weight: 400;
+        padding-left: 7vw;
     }
 }
