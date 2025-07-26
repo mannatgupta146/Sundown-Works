@@ -407,34 +407,3 @@ nav img{
     height: 10vh;
     width: 100%;
 }
-
-@media (max-width: 600px) {
-    #page1{
-        min-height: 100vh;
-        width: 100%;
-        padding: 0 5vw;
-    }
-
-    nav{
-        padding: 8vw 0vw;
-
-    }
-
-    nav img{
-        height: 9vh;
-    }
-
-    #nav-elem{
-        display: none;
-    }
-
-    nav h3{
-        display: block;
-        padding: 3vw 5vw;
-        border: 1px solid #ababab;
-        border-radius: 50px;
-        font-size: 3vw;
-        font-weight: 400;
-        padding-left: 7vw;
-    }
-}
