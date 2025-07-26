@@ -408,5 +408,21 @@ nav img{
 }
 
 @media (max-width: 600px) {
-    
+    #page1{
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 5vw;
+    }
+
+    nav{
+        padding: 8vw 0vw;
+    }
+
+    nav img{
+        height: 9vh;
+    }
+
+    #nav-elem{
+        display: none;
+    }
 }
