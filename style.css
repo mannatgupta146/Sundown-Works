@@ -581,8 +581,6 @@ nav img{
         border-radius: 50%;
         background: linear-gradient(to top right, #ff2d03, #ff5c0b);
         /* background: linear-gradient(to top right,red,blue); */
-
-
         top: 58%;
         left: 25%;
         filter: blur(20px);
@@ -591,6 +589,7 @@ nav img{
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease-in-out;
+        z-index: 1;
 
     }
 
