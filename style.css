@@ -259,6 +259,7 @@ nav img{
 
 #page2-bottom2 {
     width: 30%;
+    z-index: 9;
 }
 
 #page2-bottom2 img {
@@ -409,190 +410,158 @@ nav img{
 }
 
 #full-scr {
-    height: 100vh;
-    width: 100%;
-    background-color: #00000070;
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4vw 0;
+    position: relative;
+    z-index: 120;
+  }
+
+  nav h3 {
+    display: block;
+    font-size: 5vw;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 120;
+  }
+
+  #nav-elem {
+    display: none; /* hide inline nav on small screens */
+  }
+
+  #center {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-bottom: 6vw;
+    gap: 6vw;
+  }
+
+  #left h3 {
+    width: 90vw;
+    font-size: 4.2vw;
+  }
+
+  #right h1 {
+    font-size: 12vw;
+    line-height: 10vw;
+    text-align: left;
+  }
+
+  #page1 video {
+    margin-top: 6vw;
+    border-radius: 10px;
+  }
+
+  #hero {
+    width: 90vw;
+    height: 90vw;
+    top: auto;
+    bottom: -20vw;
+    right: 0;
+  }
+
+  #hero1, #hero2, #hero3 {
+    width: 60vw;
+    height: 60vw;
+  }
+
+/* Full screen overlay */
+#full-scr {
+    height: 45vh; /* reduced from 100vh */
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
     position: fixed;
     z-index: 99;
     top: -100%;
-    transition: all ease 0.5s;
+    left: 0;
+    transition: top 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+/* Menu box */
 #full-div1 {
-    height: 50%;
+    height: 100%;
     width: 100%;
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 8vw;
+    gap: 3vw;
 }
 
-@media (max-width:600px) {
 
-    #page1 {
-        min-height: 100vh;
-        width: 100vw;
-        padding: 0 0vw;
-    }
+/* Menu items */
+#full-div1 h4 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 6vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
 
-    nav {
-        padding: 8vw 5vw;
-        background-color: #EFEAE3;
-        /* padding: 0 5vw; */
-    }
+   
+#gola{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fe320a;
+    margin: 0vw 2vw;
+}
 
-    nav img {
-        transition: all ease 0.2s;
-        height: 9vh;
-    }
 
-    #nav-elem {
-        display: none;
-    }
+  #page2-bottom h1 {
+    font-size: 5vw;
+    width: 100%;
+    line-height: 6vw;
+  }
 
-    nav h3 {
-        display: block;
-        padding: 3vw 5vw;
-        border: 1px solid #ababab;
-        border-radius: 50px;
-        font-size: 4vw;
-        font-weight: 200;
-        padding-left: 10vw;
-    }
+  #page2-bottom2 {
+    width: 100%;
+  }
 
-    #center {
-        height: 62vh;
-        width: 100%;
-        /* background-color: orange; */
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        border-bottom: 1px solid #0000003c;
-        padding: 7vw 5vw;
-        padding-bottom: 10vw;
-        flex-direction: column-reverse;
-        position: relative;
-        z-index: 9;
-    }
+  #page2-bottom2 img {
+    width: 100%;
+    border-radius: 10px;
+  }
 
-    #left h3 {
-        width: 80%;
-        font-size: 5.5vw;
-        line-height: 6vw;
-    }
+  #page2-bottom2 p {
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 3vw;
+  }
 
-    #center h1 {
-        font-size: 17vw;
-        text-align: right;
-        line-height: 15vw;
-    }
-
-    #page1 video {
-        position: relative;
-        border-radius: 15px;
-        margin-top: 4vw;
-        height: 70vh;
-        object-fit: cover;
-        object-position: center;
-        width: 92%;
-        margin-left: 4%;
-    }
-
-    #page2 {
-        min-height: 100vh;
-        width: 100%;
-        background-color: #EFEAE3;
-        padding: 8vw 0;
-        position: relative;
-    }
-
-    #moving-text {
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    #moving-text::-webkit-scrollbar {
-        display: none;
-    }
-
-    .con {
-        white-space: nowrap;
-        display: inline-block;
-        animation-name: move;
-        animation-duration: 10s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-
-    #moving-text h1 {
-        font-size: 15vw;
-        /* background-color: lightblue; */
-        display: inline-block;
-    }
-
-    #gola {
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-        display: inline-block;
-        background-color: #FE320A;
-        margin: 2vw 2vw;
-    }
-
-    #page2-bottom {
-        height: 90vh;
-        width: 100%;
-        /* background-color: aliceblue; */
-        padding: 10vw 4vw;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        position: relative;
-        flex-direction: column;
-        z-index: 9;
-    }
-
-    #page2-bottom h1 {
-        font-size: 8.2vw;
-        width: 100%;
-        line-height: 9vw;
-    }
-
-    #page2-bottom2 {
-        width: 70%;
-        /* background-color: aqua; */
-    }
-
-    #page2-bottom2 img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    #page2-bottom2 p {
-        font-weight: 200;
-        margin-top: 2vw;
-        font-size: 3vw;
-    }
-
-    #page2 #gooey {
-        height: 62vw;
-        width: 62vw;
-        position: absolute;
-        border-radius: 50%;
-        background: linear-gradient(to top right, #ff2d03, #ff5c0b);
-        /* background: linear-gradient(to top right,red,blue); */
-        top: 58%;
-        left: 25%;
-        filter: blur(20px);
-        animation-name: gooey;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-        z-index: 1;
-
-    }
-
+  #page2 #gooey {
+    height: 62vw;
+    width: 62vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+  }
 
 }
 
