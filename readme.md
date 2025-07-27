@@ -37,8 +37,7 @@ This project is **inspired by** and **built following** a tutorial by **Sheryian
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/mannatgupta146/Sundown-Works.git
-````
+   git clone https://github.com/mannatgupta146/Sundown-Works.git````
 
 2. **Navigate to the project folder**
 
