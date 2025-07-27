@@ -1,87 +1,79 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const scroll = new LocomotiveScroll({
         el: document.querySelector('#main'),
-        smooth: true
+        smooth: true,
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
     });
+
+    page3Animation(); // Use only once
+    menuAnimation();
+    loaderAnimation();
 });
 
 function page3Animation() {
-    var elemC = document.querySelector('#elem-container');
-    var fixed = document.querySelector("#fixed-image");
+    const elemC = document.querySelector('#elem-container');
+    const fixed = document.querySelector('#fixed-image');
 
-    if (!elemC || !fixed) return; 
+    if (!elemC || !fixed) return;
 
-    elemC.addEventListener('mouseenter', function () {
-        fixed.style.display = 'block';
-    });
+    const showFixed = () => { fixed.style.display = 'block'; };
+    const hideFixed = () => { fixed.style.display = 'none'; };
 
-    elemC.addEventListener('mouseleave', function () {
-        fixed.style.display = 'none';
-    });
+    // Desktop + Mobile events
+    elemC.addEventListener('mouseenter', showFixed);
+    elemC.addEventListener('mouseleave', hideFixed);
+    elemC.addEventListener('touchstart', showFixed);
+    elemC.addEventListener('touchend', hideFixed);
 
-    var elems = document.querySelectorAll(".elem");
+    const elems = document.querySelectorAll('.elem');
     elems.forEach(function (e) {
-        e.addEventListener("mouseenter", function () {
-            var image = e.getAttribute("data-image");
+        const setImage = () => {
+            const image = e.getAttribute('data-image');
             fixed.style.backgroundImage = `url(${image})`;
-        });
+        };
+        e.addEventListener('mouseenter', setImage);
+        e.addEventListener('touchstart', setImage);
     });
 }
-page3Animation()
 
-function page4Animation() {
-    var elemC = document.querySelector("#elem-container")
-    var fixed = document.querySelector("#fixed-image")
-    elemC.addEventListener("mouseenter", function () {
-        fixed.style.display = "block"
-    })
-    elemC.addEventListener("mouseleave", function () {
-        fixed.style.display = "none"
-    })
-
-    var elems = document.querySelectorAll(".elem")
-    elems.forEach(function (e) {
-        e.addEventListener("mouseenter", function () {
-            var image = e.getAttribute("data-image")
-            fixed.style.backgroundImage = `url(${image})`
-        })
-    })
-}
-page4Animation()
-
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 40,
-  freeMode: true,
-  grabCursor: true,
-  watchOverflow: true, // 👈 helps avoid empty space if few slides
+const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    freeMode: true,
+    grabCursor: true,
+    watchOverflow: true,
 });
 
-
 function menuAnimation() {
+    const menu = document.querySelector('nav h3');
+    const full = document.querySelector('#full-scr');
+    const navimg = document.querySelector('nav img');
+    let flag = 0;
 
-    var menu = document.querySelector("nav h3")
-    var full = document.querySelector("#full-scr")
-    var navimg = document.querySelector("nav img")
-    var flag = 0
-    menu.addEventListener("click", function () {
-        if (flag == 0) {
-            full.style.top = 0
-            navimg.style.opacity = 0
-            flag = 1
+    const toggleMenu = () => {
+        if (flag === 0) {
+            full.style.top = '0';
+            navimg.style.opacity = 0;
+            flag = 1;
         } else {
-            full.style.top = "-100%"
-            navimg.style.opacity = 1
-            flag = 0
+            full.style.top = '-100%';
+            navimg.style.opacity = 1;
+            flag = 0;
         }
-    })
+    };
+
+    menu.addEventListener('click', toggleMenu);
+    menu.addEventListener('touchstart', toggleMenu);
 }
-menuAnimation()
 
 function loaderAnimation() {
-    var loader = document.querySelector("#loader")
-    setTimeout(function () {
-        loader.style.top = "-100%"
-    }, 4200)
+    const loader = document.querySelector('#loader');
+    setTimeout(() => {
+        loader.style.top = '-100%';
+    }, 4200);
 }
-loaderAnimation()
