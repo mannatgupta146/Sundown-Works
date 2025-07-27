@@ -379,7 +379,7 @@ nav img{
 
 #footer {
   width: 100%;
-  height: 105vh;
+  height: 100vh;
   background-color: #000;
   color: #fff;
   position: fixed;
@@ -390,12 +390,12 @@ nav img{
   flex-direction: column;
   justify-content: flex-end;
   padding: 1vw 2vw;
-  overflow: hidden; /* Hide overflow from animation */
+  overflow: hidden;
 }
 
 #footer h1 {
   font-size: 20vw;
-  z-index: 10; /* ensure h1 stays above animation */
+  z-index: 10;
   position: relative;
 }
 
@@ -411,10 +411,9 @@ nav img{
   width: 100%;
 }
 
-/* Animation container placed at top of footer */
 #zero {
   width: 100%;
-  height: 30vw;
+  height: 20vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -423,66 +422,72 @@ nav img{
   justify-content: center;
   align-items: flex-end;
   pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 #zero1, #zero2, #zero3 {
-  filter: none; /* Remove glow */
+  filter: blur(25px);
+  opacity: 0.75;
+  transform-origin: bottom center;
 }
 
 #zero1 {
-  background-color: #fe320a;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  background-color: red;
   height: 100%;
   width: 100%;
   position: absolute;
+  filter: blur(20px);
   top: 0;
   left: 0;
   z-index: 1;
-  animation: waveBase 6s infinite ease-in-out;
+  animation: waveBase 5.5s infinite ease-in-out;
 }
 
 #zero2 {
-  background: #fe320a;
-  height: 25vw;
-  width: 25vw;
+  background: rgba(242, 35, 35, 0.799);
+  height: 20vw;
+  width: 28vw;
   border-radius: 50%;
   position: absolute;
+  filter: blur(55px);
   top: 10%;
-  left: 25%;
+  left: 20%;
   z-index: 2;
-  animation: waveLeft 4s infinite ease-in-out alternate;
+  animation: waveBlob1 4s infinite ease-in-out;
 }
 
 #zero3 {
-  background: #fe320a;
-  height: 25vw;
-  width: 25vw;
+  background: rgba(242, 35, 35, 0.799);
+  height: 20vw;
+  width: 28vw;
   border-radius: 50%;
   position: absolute;
+  filter: blur(50px);
   top: 10%;
   left: 50%;
   z-index: 3;
-  animation: waveRight 5s infinite ease-in-out alternate;
+  animation: waveBlob2 5s infinite ease-in-out;
 }
 
-/* Wave animations */
 @keyframes waveBase {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50%      { transform: translateY(-20px) scaleY(0.9); }
 }
 
-@keyframes waveLeft {
-  0% { transform: translateX(0) translateY(20px); }
-  50% { transform: translateX(-30px) translateY(-10px); }
-  100% { transform: translateX(0) translateY(20px); }
+@keyframes waveBlob1 {
+  0%   { transform: translateY(0) scaleY(1); }
+  25%  { transform: translateY(-15px) scaleY(0.95); }
+  50%  { transform: translateY(-30px) scaleY(0.85); }
+  75%  { transform: translateY(-15px) scaleY(0.95); }
+  100% { transform: translateY(0) scaleY(1); }
 }
 
-@keyframes waveRight {
-  0% { transform: translateX(0) translateY(20px); }
-  50% { transform: translateX(30px) translateY(-15px); }
-  100% { transform: translateX(0) translateY(20px); }
+@keyframes waveBlob2 {
+  0%   { transform: translateY(0) scaleY(1); }
+  25%  { transform: translateY(-10px) scaleY(0.96); }
+  50%  { transform: translateY(-25px) scaleY(0.86); }
+  75%  { transform: translateY(-10px) scaleY(0.96); }
+  100% { transform: translateY(0) scaleY(1); }
 }
 
 
