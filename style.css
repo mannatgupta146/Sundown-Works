@@ -306,25 +306,29 @@ nav img{
     min-height: 100vh;
     width: 100%;
     background-color: #efeae3;
-    padding: 1vw 0;
+    padding: 0vw 0;
 }
 
-.elem{
-    width: 100%;
-    height: 120px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 4vw; 
-    border-top: 1px solid #38383864;
-    overflow: hidden;
+.elem {
+  width: 100%;
+  padding: 2vw 4vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #38383864;
+  overflow: hidden;
 }
 
-.elem h2{
-    font-size: 2.5vw;
-    position: relative;
-    z-index: 9;
+
+.elem h2 {
+  font-size: 2.5vw;
+  line-height: 1; 
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
 }
+
 
 .elem .overlay{
     height: 100%;
@@ -354,23 +358,59 @@ nav img{
     pointer-events: none;
 }
 
-#page4{
-    height: 70vh;
-    width: 100%;
-    background-color: #efeae3;
-    padding: 8vw 2vw;
+#page4 {
+  width: 100%;
+  background-color: #efeae3;
+  padding: 10vw 2vw;
+  overflow: hidden;
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  align-items: flex-start;
 }
 
 .swiper-slide {
-    width: 30%;
-    border-left: 1px solid #aeadad;
-    padding: 0 2vw;
+  width: 300px; /* keep consistent */
+  height: auto;
+  border-left: 1px solid #aeadad;
+  padding: 1.5vw;
+  transition: transform 0.4s ease;
+  background-color: #efeae3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  box-sizing: border-box;
 }
+
+
+.swiper-slide:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.swiper-slide h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.swiper-slide p {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: #222;
+}
+
+.brand-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
 
 #page5{
     height: 100vh;
@@ -502,7 +542,7 @@ nav img{
     height: auto;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4vw 0;
+    padding: 6vw 2vw;
     position: relative;
     z-index: 120;
   }
@@ -556,6 +596,50 @@ nav img{
     height: 60vw;
   }
 
+  #moving-text h1{
+    font-size: 8vw;
+}
+
+#page2-bottom{
+    padding: 4vw;
+}
+
+  #page2 #gooey{
+    height: 50vw;
+    width: 50vw;
+    top: 20%;
+    left: 15%;
+  }
+
+  .elem{
+    height: 100px;
+    padding: 0 6vw; 
+}
+
+.elem h2{
+    font-size: 4.5vw;
+}
+
+.elem:hover .overlay{
+    top: 0;
+    transition: all ease 0.5s;
+}
+
+#fixed-image{
+    height: 40vw;
+    width: 27vw;
+    position: fixed;
+    left: 60%;
+    top: 50%;
+}
+
+#page3{
+    padding: 10vw 0;
+}
+
+#page4 {
+  padding: 15vw 4vw;
+}
 /* Full screen overlay */
 #full-scr {
     height: 45vh; /* reduced from 100vh */

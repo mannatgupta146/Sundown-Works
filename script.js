@@ -49,14 +49,14 @@ function page4Animation() {
 }
 page4Animation()
 
-function swiperAnimation() {
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 100,
-    });
-}
-swiperAnimation()
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  freeMode: true,
+  grabCursor: true,
+  watchOverflow: true, // 👈 helps avoid empty space if few slides
+});
+
 
 function menuAnimation() {
 
