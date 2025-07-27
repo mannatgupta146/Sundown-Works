@@ -53,22 +53,25 @@ function menuAnimation() {
     const menu = document.querySelector('nav h3');
     const full = document.querySelector('#full-scr');
     const navimg = document.querySelector('nav img');
-    let flag = 0;
+    let isOpen = false;
 
-    const toggleMenu = () => {
-        if (flag === 0) {
+    const toggleMenu = (e) => {
+        e.preventDefault(); // Prevents double triggers on mobile
+
+        if (!isOpen) {
             full.style.top = '0';
-            navimg.style.opacity = 0;
-            flag = 1;
+            navimg.style.opacity = '0';
+            isOpen = true;
         } else {
             full.style.top = '-100%';
-            navimg.style.opacity = 1;
-            flag = 0;
+            navimg.style.opacity = '1';
+            isOpen = false;
         }
     };
 
+    // Use both click and touchstart, but prevent double-firing
     menu.addEventListener('click', toggleMenu);
-    menu.addEventListener('touchstart', toggleMenu);
+    menu.addEventListener('touchstart', toggleMenu, { passive: false });
 }
 
 function loaderAnimation() {
